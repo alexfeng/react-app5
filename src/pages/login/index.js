@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { Button, Input } from "antd";
 import imgLogo from './logo.png'
+import Header from '@/components/header'
 import './login.styl'
 
 function Login() {
@@ -10,6 +11,7 @@ function Login() {
 
   return (
     <div className="P-login">
+      <Header />
       <img src="{imgLogo}" alt="" className="logo" />
       <div className="ipt-con">
         <Input placeholder="帐号" />
