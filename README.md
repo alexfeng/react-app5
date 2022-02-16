@@ -68,3 +68,40 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+├─ /config <-- webpack 配置目录
+├─ /node_modules
+├─ /public
+| ├─ favicon.ico <-- 网页图标
+| └─ index.html <-- HTML 页模板
+├─ /scripts <-- node 编译脚本
+├─ /src
+| ├─ /api <-- api 目录
+| | └─ index.js <-- api 库
+| ├─ /common <-- 全局公用目录
+| | ├─ /fonts <-- 字体文件目录
+| | ├─ /images <-- 图片文件目录
+| | ├─ /js <-- 公用 js 文件目录
+| | └─ /style <-- 公用样式文件目录
+| | | ├─ frame.styl <-- 全部公用样式（import 本目录其他全部 styl）
+| | | ├─ reset.styl <-- 清零样式（如果使用 Ant Design，就无需此文件）
+| | | └─ global.styl <-- 全局公用样式
+| ├─ /components <-- 公共模块组件目录
+| | ├─ /header <-- 头部导航模块
+| | | ├─ index.js <-- header 主文件
+| | | └─ header.styl <-- header 样式文件
+| | └─ ... <-- 其他模块
+| ├─ /pages <-- 页面组件目录
+| | ├─ /home <-- home 页目录
+| | | ├─ index.js <-- home 主文件
+| | | └─ home.styl <-- home 样式文件
+| | ├─ /login <-- login 页目录
+| | | ├─ index.js <-- login 主文件
+| | | └─ login.styl <-- login 样式文件
+| | └─ ... <-- 其他页面
+| ├─ App.js <-- 项目主模块
+| ├─ index.js <-- 项目入口文件
+| ├─.gitignore
+| ├─ package.json
+| ├─ README.md
+| └─ yarn.lock
