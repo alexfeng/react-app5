@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { Button } from "antd";
+import { goto } from '@/api'
 import './home.styl'
 
 function Home() {
@@ -8,6 +9,11 @@ function Home() {
   return (
     <div className="P-home">
       <h1>Home Page</h1>
+      <div className="ipt-con">
+        <Button onClick={() => {
+          navigate('/login')
+        }}>组件外跳转</Button>
+      </div>
       <div className="ipt-con">
         <Button onClick={() => {
           navigate('/login')
