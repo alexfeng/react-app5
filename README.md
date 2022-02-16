@@ -106,8 +106,10 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 | ├─ README.md
 | └─ yarn.lock
 
-1. 项目使用 Stylus 作为 css 预处理语言
-2. 样式命名规范
+1. 项目使用 Stylus 作为 css 预处理语言。
+2. 样式命名规范。
    G-xx： 表示全局样式，用来定义公用样式。
    P-xx: 表示页面样式，用来设置页面的背景色、尺寸、定制化调整在此页面的组件样式。
    M-xx: 表示组件样式，专注组件本身样式。
+
+3. babel-plugin-import 可是实现样式嗯按需加载。
