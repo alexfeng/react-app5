@@ -75,6 +75,9 @@ const sassModuleRegex = /\.module\.(scss|sass)$/;
 const lessRegex = /\.less$/;
 const lessModuleRegex = /\.module\.less$/;
 
+const stylusRegex = /\.styl$/;
+const stylusModuleRegex = /\.module\.styl$/;
+
 const hasJsxRuntime = (() => {
   if (process.env.DISABLE_NEW_JSX_TRANSFORM === 'true') {
     return false;
@@ -576,6 +579,40 @@ module.exports = function (webpackEnv) {
                   },
                 },
                 'less-loader'
+              ),
+            },
+            // 支持 stylus
+            {
+              test: stylusRegex,
+              exclude: stylusModuleRegex,
+              use: getStyleLoaders(
+                {
+                  importLoaders: 3,
+                  sourceMap: isEnvProduction
+                    ? shouldUseSourceMap
+                    : isEnvDevelopment,
+                  modules: {
+                    mode: 'icss',
+                  },
+                },
+                'stylus-loader'
+              ),
+              sideEffects: true,
+            },
+            {
+              test: stylusModuleRegex,
+              use: getStyleLoaders(
+                {
+                  importLoaders: 3,
+                  sourceMap: isEnvProduction
+                    ? shouldUseSourceMap
+                    : isEnvDevelopment,
+                  modules: {
+                    mode: 'local',
+                    getLocalIdent: getCSSModuleLocalIdent,
+                  },
+                },
+                'stylus-loader'
               ),
             },
             // "file" loader makes sure those assets get served by WebpackDevServer.

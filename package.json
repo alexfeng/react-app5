@@ -137,6 +137,8 @@
   "devDependencies": {
     "less": "^4.1.2",
     "less-loader": "^10.2.0",
-    "node-sass": "^7.0.1"
+    "node-sass": "^7.0.1",
+    "stylus": "^0.56.0",
+    "stylus-loader": "^6.2.0"
   }
 }
