@@ -139,7 +139,7 @@
         "import",
         {
           "libraryName": "antd",
-          "style": "css"
+          "style": true
         }
       ]
     ] 
