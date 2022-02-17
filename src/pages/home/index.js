@@ -9,11 +9,11 @@ function Home() {
   const navigate = useNavigate()
   return (
     <div className="P-home">
-      <Header />
+      <Header title='home' info={() => { console.log('info:home') }} />
       <h1>Home Page</h1>
       <div className="ipt-con">
         <Button onClick={() => {
-          navigate('/login')
+          goto('/login')
         }}>组件外跳转</Button>
       </div>
       <div className="ipt-con">

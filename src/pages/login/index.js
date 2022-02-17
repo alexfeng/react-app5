@@ -11,7 +11,7 @@ function Login() {
 
   return (
     <div className="P-login">
-      <Header />
+      <Header title='login' info={() => { console.log('info:login') }} />
       <img src="{imgLogo}" alt="" className="logo" />
       <div className="ipt-con">
         <Input placeholder="帐号" />
